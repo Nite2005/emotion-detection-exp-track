@@ -20,16 +20,16 @@ stages:
     outs:
     - data/interim
   model_training:
-    cmd: python src/models/model_training.py
+    cmd: python src/model/model_training.py
     deps:
     - data/interim
-    - src/models/model_training.py
+    - src/model/model_training.py
     outs:
     - models/model.pkl
   model_evaluation:
-    cmd: python src/models/model_evaluation.py
+    cmd: python src/model/model_evaluation.py
     deps:
     - data/interim
-    - src/models/model_evaluation.py
+    - src/model/model_evaluation.py
     outs:
     - metric.json
